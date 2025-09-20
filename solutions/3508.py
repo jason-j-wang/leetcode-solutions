@@ -1,4 +1,7 @@
 #https://leetcode.com/problems/implement-router/description/
+# inefficient b/c indexing a deque is O(n)
+# should have another map to keep track of offset per dest instead,  use bisect
+
 class Router:
 
     def __init__(self, memoryLimit: int):
