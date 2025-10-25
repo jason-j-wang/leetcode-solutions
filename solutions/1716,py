@@ -1,0 +1,11 @@
+#https://leetcode.com/problems/calculate-money-in-leetcode-bank/description/?envType=daily-question&envId=2025-10-25
+class Solution:
+    def totalMoney(self, n: int) -> int:
+        g = 28
+
+        num_groups = n // 7
+        leftover = n % 7
+
+        full_groups = g * num_groups + 7 * (num_groups * (num_groups - 1)) // 2
+
+        return full_groups + num_groups * leftover + (leftover * (leftover + 1)) // 2
